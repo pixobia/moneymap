@@ -7,7 +7,7 @@ export const convertCurrency = async (
 ) => {
   try {
     const response = await axios.get(
-      `http://65.2.71.131:3000/api/v1/ratesininr/${date}/${currency}`
+      `https://forexin-kjbx.onrender.com/api/v1/ratesininr/${date}/${currency}`
     );
 
     const exchangeRate = response.data.rate;

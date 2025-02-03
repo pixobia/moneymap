@@ -3,7 +3,6 @@ import { Options } from "@mikro-orm/core";
 import { Transctions } from "./src/entities/Transctions";
 import path from "path";
 import { config } from "dotenv";
-import fs from "fs";
 
 config({
   path: path.join(path.resolve(), ".env"),
@@ -30,7 +29,7 @@ const mikroOrmConfig: Options = {
   driverOptions: {
     connection: {
       ssl: {
-        ca: fs.readFileSync(sslCert || ""),
+        ca: sslCert,
         rejectUnauthorized: false,
       },
       connectionTimeoutMillis: 2000, // Timeout in milliseconds for a connection attempt

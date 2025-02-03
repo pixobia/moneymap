@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start dist/src/server.js --name backend",
+    "start": "node dist/src/server.js",
     "stop": "pm2 stop backend",
     "restart": "pm2 restart backend",
     "build": "tsc",
